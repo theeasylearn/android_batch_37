@@ -9,7 +9,7 @@
 	define("SERVER","localhost:3306");
 	define("USERNAME","root");
 	define("PASSWORD","");
-	define("DEBUG",false);  //it will display error detail in JSON ARRAY format
+	define("DEBUG",true);  //it will display error detail in JSON ARRAY format
 	define("DATABASE","android_batch_34");
 	define("METHOD","GET"); //METHOD can be get or post 
 	define("LIVE",1);
@@ -38,12 +38,12 @@
 		mysqli_query($GLOBALS['link'],$sql2);
 		exit; //stop php script immediately
 	}
-	function EncryptPassword($OriginalPassword)
+	function HashPassword($OriginalPassword)
 	{
 		$options = ['cost' => 12];
 		return password_hash($OriginalPassword,PASSWORD_DEFAULT, $options);
 	}
-	function MatchPassword($ExistingPassword /* already encrypted password */,$OriginalPassword)
+	function MatchPassword($ExistingPassword /* already hashed password */,$OriginalPassword)
 	{
 		 return password_verify ($OriginalPassword,$ExistingPassword);
 	}
