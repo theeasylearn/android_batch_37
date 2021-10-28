@@ -12,7 +12,6 @@
 	define("DEBUG",true);  //it will display error detail in JSON ARRAY format
 	define("DATABASE","android_batch_34");
 	define("METHOD","GET"); //METHOD can be get or post 
-	define("LIVE",1);
 	if(METHOD=="GET")
 		$input = $_REQUEST;
 	else 
