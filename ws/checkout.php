@@ -78,4 +78,4 @@ if (isset($usersid, $fullname, $address1, $address2, $city, $mobile, $pincode, $
     }
     array_unshift($response, array("error" => "no"));
 }
-echo json_encode($response);
+echo json_encode($response); //done
