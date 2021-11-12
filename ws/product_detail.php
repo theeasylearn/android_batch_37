@@ -5,7 +5,7 @@
     input: productid=1 
     output: 
     1) [{"error":"input is missing"}]
-    2) [{"total":1},{"id":"1","categoryid":"1","title":"Acer Laptop","price":"100","stock":"100","weight":"3000","size":"15 inch","photo":"acer.jpg","detail":"WINDOWS 10 4 GB DDR3 RAM 128 gb ssd hard disk","islive":"1","isdeleted":"0"}]
+    2) [{"error":"no"},{"total":1},{"id":"1","categoryid":"1","title":"Acer Laptop","price":"100","stock":"98","weight":"3000","size":"15 inch","photo":"acer.jpg","detail":"WINDOWS 10 4 GB DDR3 RAM 128 gb ssd hard disk","islive":"1","isdeleted":"0"}]
     */
 
     require_once("../inc/connection.php");
