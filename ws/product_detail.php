@@ -5,7 +5,7 @@
     input: productid=1 
     output: 
     1) [{"error":"input is missing"}]
-    2) [{"error":"no"},{"total":1},{"id":"1","categoryid":"1","title":"Acer Laptop","price":"100","stock":"98","weight":"3000","size":"15 inch","photo":"acer.jpg","detail":"WINDOWS 10 4 GB DDR3 RAM 128 gb ssd hard disk","islive":"1","isdeleted":"0"}]
+    2) [{"error":"no"},{"total":1},{"categorytitle":"laptop","id":"1","categoryid":"1","title":"Acer Laptop","price":"100","stock":"98","weight":"3000","size":"15 inch","photo":"acer.jpg","detail":"WINDOWS 10 4 GB DDR3 RAM 128 gb ssd hard disk","islive":"1","isdeleted":"0"}]
     */
 
     require_once("../inc/connection.php");
@@ -16,7 +16,7 @@
     }
     else 
     {
-        $sql = "select * from product where id=$productid and islive=1 and isdeleted=0";
+        $sql = "select c.title 'categorytitle',p.* from product p,category c where p.id=$productid and p.islive=1 and p.isdeleted=0 and p.categoryid=c.id";
         $table=mysqli_query($link,$sql) or ReturnError(null,__LINE__);
         $total = mysqli_num_rows($table);
         array_push($response,array("total"=>$total));
