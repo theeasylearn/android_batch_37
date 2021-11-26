@@ -1,8 +1,8 @@
-<?php 
+<?php
     /*
     purpose : used to add product into cart 
     how to call : http://localhost:8080/android_batch_37/ws/addtocart.php?productid=1&usersid=1
-    input: productid,usersid (required)
+    input: productid,usersid (required) 
     output: 
     1) [{"error":"input is missing"}]
     2) [{"error":"no"},{"message":"Product added into cart"}]

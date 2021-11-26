@@ -6,7 +6,7 @@
     output: 
     1) [{"error":"input is missing"}]
     2) [{"error":"no"},{"total":0}]
-    3) [{"error":"no"},{"total":2},{"id":"1","title":"Acer Laptop","price":"100","photo":"acer.jpg","quantity":"1"},{"id":"2","title":"dell laptop","price":"200","photo":"dell.jpg","quantity":"2"}]
+    3)[{"error":"no"},{"total":2},{"id":"6","productid":"1","title":"Acer Laptop","price":"100","photo":"acer.jpg","quantity":"1"},{"id":"4","productid":"2","title":"dell laptop","price":"200","photo":"dell.jpg","quantity":"1"}]
     */
     require_once("../inc/connection.php");
     extract($input);
@@ -16,7 +16,7 @@
     }
     else 
     {
-        $sql = "select c.id,p.id,title,p.price,photo,c.quantity from product p,cart c where productid=p.id and usersid=$usersid and billid=0 order by title";
+        $sql = "select c.id,p.id 'productid',title,p.price,photo,c.quantity from product p,cart c where productid=p.id and usersid=$usersid and billid=0 order by title";
         $table = mysqli_query($link,$sql) or ReturnError(null,__LINE__);
         $total = mysqli_num_rows($table); //mysqli_num_rows how many rows query has fetched 
         array_push($response,array("total"=>$total));

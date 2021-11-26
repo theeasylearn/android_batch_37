@@ -6,6 +6,7 @@
     output: 
       in case input is missing
      [{"error":"input is missing"}]
+     [{"error":"no"},{"success":"yes"},{"message":"we have sent you password recover detail on your registered email address"}]
     
 */
 require_once("../inc/connection.php");

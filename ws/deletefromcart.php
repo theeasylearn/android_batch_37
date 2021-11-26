@@ -3,7 +3,7 @@
     purpose : used to delete product from cart 
     how to call : http://localhost:8080/android_batch_37/ws/deletefromcart.php?cartid=1
     input: cartid (required)
-    output: 
+    output:   
     1) [{"error":"input is missing"}]
     2) [{"error":"no"},{"message":"Product removed from cart"}]
     */

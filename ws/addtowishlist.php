@@ -5,7 +5,7 @@
     input: productid,usersid (required)
     output: 
     1) [{"error":"input is missing"}]
-    2) 
+    2) [{"error":"no"},{"message":"Wishlist updated"}]
     */
     require_once("../inc/connection.php");
     extract($input);
